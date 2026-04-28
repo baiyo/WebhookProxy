@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WebhookProxy</title>
+  <link rel="icon" href='./img/icon.jpeg' />
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header>
+    <h1>WebhookProxy</h1>
+    <p class="subtitle">A Discord webhook proxy, primarily for Roblox games.</p>
+    <div class="links">
+      <a href="#usage" class="btn">Get started!</a>
+      <!-- <a href="#" class="btn btn-outline">DevForum</a> -->
+      <a href="https://github.com/baiyo/WebhookProxy" class="btn btn-outline">View source</a>
+    </div>
+  </header>
+
+  <div class="notice">
+    hi :) this is a free service, so please respect it
+  </div>
+
+  <section class="converter-section">
+  <h2>Convert Your Webhook URL</h2>
+  <div class="converter-box">
+    <div class="input-group">
+      <input 
+        type="text" 
+        id="webhookInput" 
+        placeholder="https://discord.com/api/webhooks/..." 
+        class="converter-input"
+      />
+      <div class="arrow">→</div>
+      <input 
+        type="text" 
+        id="webhookOutput" 
+        placeholder="Output..." 
+        class="converter-input output"
+        readonly
+      />
+    </div>
+    <button id="convertBtn" class="btn convert-btn">Convert URL</button>
+  </div>
+</section>
+
+  <section>
+    <h2>Why use WebhookProxy?</h2>
+    <ul>
+      <li>
+        <span class="feature-title">Easy to Integrate</span>
+        Simply replace <code>discord.com</code> with <code>webhook.bayo.moe</code> in your webhook URL.
+      </li>
+      <li>
+        <span class="feature-title">Tried and Tested</span>
+        Reliably serving webhooks with built-in monitoring and uptime.
+      </li>
+      <li>
+        <span class="feature-title">Kept Up</span>
+        Maintained long-term (maybe) even if Discord changes Roblox webhook support.
+      </li>
+      <li>
+        <span class="feature-title">Complies with ToS</span>
+        Built with Discord's Terms of Service in mind, including ratelimit enforcement and anti-abuse measures.
+      </li>
+      <li>
+        <span class="feature-title">Ratelimit Handling</span>
+            We queue requests and enforce Discord's ratelimits to prevent disruptions. Excessive requests may lead to temporary bans, so please use responsibly.
+      </li>
+    </ul>
+  </section>
+
+  <section id="usage">
+    <h2>Usage</h2>
+    <p>Replace your Discord webhook URL:</p>
+    <pre style="background:var(--code-bg);padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0;font-size:0.9rem"><code>https://discord.com/api/webhooks/...
+→
+https://webhook.bayo.moe/api/webhooks/...</code></pre>
+    <p style="color:var(--muted);font-size:0.9rem">
+      ⚠️ Respect Discord's ratelimits (5 requests per 2 seconds). Invalid payloads may trigger stricter limits.
+    </p>
+  </section>
+
+  <footer>
+    <p>built by <a href="https://bayo.moe">bao</a> ♥ <a href="https://github.com/baiyo/WebhookProxy">Source on GitHub</a></p>
+  </footer>
+</body>
+
+<script src="./js/webhookreplace.js"></script>
+</html>
